@@ -7,6 +7,11 @@ public class LinkedList <T>{
 	
 	int maxCount= 0;
 	
+	public int size() {
+		
+		return maxCount;
+	}
+	
 	public void add(T data) {
 		Node <T> tempNode = new  Node<>(data);
 		
@@ -19,6 +24,9 @@ public class LinkedList <T>{
 		}
 		maxCount++;
 	}
+	
+
+		
 	
 	public void delete(int index) {
 		if(head == null || index > maxCount -1 )
@@ -59,12 +67,11 @@ public class LinkedList <T>{
 	}
 	
 	public T getLast() {
-		if(head == null)
-			return null;
-		
-		current = tail;
-		return current.data;
-		
+	    if(head == null)
+	        return null;
+
+	    current = tail;
+	    return current.data;
 	}
 	
 	public T getNext() {
